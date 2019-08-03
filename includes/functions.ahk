@@ -36,6 +36,7 @@ setHotkeyState(t) {
 	Hotkey, %RepeatButtonKey%, repeatButtonLabel, %t%
 	Hotkey, %CrosshairKey%, crossHairLabel, %t%
 	Hotkey, %OutfitFixKey%, outfitFixLabel, %t%
+	Hotkey, %PassiveKey%, passiveModeLabel, %t%
 	
 	T := false
 }
@@ -67,7 +68,7 @@ callService(s) {
 		Send {Left}{Enter}
 		
 	else if(s = "MorsMutual")
-		Send {Left}{Down 2}{Enter}
+		Send {Left}{Up 3}{Enter}
 		
 	else if(s = "Mechanic")
 		Send {Left 2}{Enter}
@@ -102,9 +103,9 @@ getItem(i) {
 	}
 	else if(i = "Snack") {
 		if(playerState = 0)
-			Send {Down 2}
+			Send {Down}
 		else
-			Send {Down 3}
+			Send {Down 2}
 		Send {Enter}{Down 2}{Enter 3}
 	}
 	else if(i = "Ammo") {
@@ -155,9 +156,22 @@ outfitFix() {
 
 repeatButton() {
 	if(T = true) {
+	
 		setTimer, loopRepeatButton, off
 	} else {
 		setTimer, loopRepeatButton, on
 	}
 	T := !T
+}
+
+togglePassive(){
+	openM()
+	if(playerState = 0)
+		Send {UP}{Enter}
+	else if (playerState = 1)
+	{
+		Send {Enter}{UP}{Enter},
+		openM()
+		Send {UP}{Enter}
+	}
 }

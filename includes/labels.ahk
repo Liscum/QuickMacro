@@ -75,6 +75,10 @@ outfitFixLabel:
 	outfitFix()
 return
 
+passiveModeLabel:
+	togglePassive()
+return
+
 loopRepeatButton:
     while(T) {
 		Send {%RepeatButton%}

@@ -26,3 +26,19 @@ GTA Online useful macros
 + NumEnter - Fast EWO
 + NumDot - Get snack
 + RCtrl & RShift - Outfit fix
++ NumMult - Passive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

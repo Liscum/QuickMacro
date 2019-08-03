@@ -35,6 +35,7 @@ loadConf() {
 		IniRead, RepeatButtonKey, %SettingsFile%, Hotkeys, RepeatButtonKey
 		IniRead, CrosshairKey, %SettingsFile%, Hotkeys, CrosshairKey
 		IniRead, OutfitFixKey, %SettingsFile%, Hotkeys, OutfitFixKey
+		IniRead, PassiveKey, %SettingsFile%, Hotkeys, PassiveKey
 	} else {
 		IniWrite, %keyPhoneDalay%, %SettingsFile%, Delays, KeyPhoneDalay
 		IniWrite, %keyPhoneDuration%, %SettingsFile%, Delays, KeyPhoneDuration
@@ -63,5 +64,6 @@ loadConf() {
 		IniWrite, %RepeatButtonKey%, %SettingsFile%, Hotkeys, RepeatButtonKey
 		IniWrite, %CrosshairKey%, %SettingsFile%, Hotkeys, CrosshairKey
 		IniWrite, %OutfitFixKey%, %SettingsFile%, Hotkeys, OutfitFixKey
+		IniWrite, %PassiveKey%, %SettingsFile%, Hotkeys, PassiveKey
 	}
 }
