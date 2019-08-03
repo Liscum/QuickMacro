@@ -27,18 +27,3 @@ GTA Online useful macros
 + NumDot - Get snack
 + RCtrl & RShift - Outfit fix
 + NumMult - Passive
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
